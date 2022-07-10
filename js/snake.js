@@ -1,7 +1,7 @@
 /*
 JavaScript Snake
 First version by Patrick Gillespie - I've since merged in a good number of github pull requests
-http://patorjk.com/games/snake 
+http://patorjk.com/games/snake
 */
 
 /**
@@ -139,10 +139,10 @@ SNAKE.Snake = SNAKE.Snake || (function() {
                 modeDropdown.addEventListener('change', function(evt) {
                     evt = evt || {};
                     var val = evt.target ? parseInt(evt.target.value) : 75;
-                    
+
                     if (isNaN(val)) {
                         val = 75;
-                    } else if (val < 25) {
+                    } else if (val < 2) {
                         val = 75
                     }
 
@@ -337,8 +337,8 @@ SNAKE.Snake = SNAKE.Snake || (function() {
                 newHead.elm.id="snake-snakehead-alive";
                 oldHead.elm.id = "";
             }
-            
-            
+
+
 
             // check the new spot the snake moved into
 
@@ -410,7 +410,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             //Reset speed
             var selectedSpeed = document.getElementById("selectMode").value;
             snakeSpeed = parseInt(selectedSpeed);
-            
+
             handleEndCondition(playingBoard.handleDeath);
         };
 
@@ -731,7 +731,7 @@ SNAKE.Board = SNAKE.Board || (function() {
 
             mySnake = new SNAKE.Snake({playingBoard:me,startRow:2,startCol:2,premoveOnPause: config.premoveOnPause});
             myFood = new SNAKE.Food({playingBoard: me});
-            
+
             elmWelcome.style.zIndex = 1000;
         }
         function maxBoardWidth() {
@@ -934,7 +934,7 @@ SNAKE.Board = SNAKE.Board || (function() {
                 cLeft = 0;
                 cWidth = getClientWidth()-20;
                 cHeight = getClientHeight()-20;
-                
+
             } else {
                 cTop = config.top;
                 cLeft = config.left;
@@ -1100,4 +1100,4 @@ SNAKE.Board = SNAKE.Board || (function() {
         }
 
     }; // end return function
-})();  
+})();

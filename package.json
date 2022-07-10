@@ -2,7 +2,7 @@
   "name": "javascript-snake",
   "version": "1.0.0",
   "description": "JavaScript Snake<br/> By Patrick Gillespie<br/> License: MIT<br/> http://patorjk.com/games/snake",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html",
@@ -18,7 +18,9 @@
     "url": "https://github.com/patorjk/JavaScript-Snake/issues"
   },
   "homepage": "https://github.com/patorjk/JavaScript-Snake#readme",
-  "dependencies": {},
+  "dependencies": {
+    "parcel": "^2.6.2"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"
   }
